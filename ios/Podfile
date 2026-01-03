@@ -3,9 +3,12 @@ platform :ios, '16.0'
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 project 'Runner', {
-  'Debug' => :debug,
-  'Profile' => :release,
-  'Release' => :release,
+  'Debug-a' => :debug,
+  'Profile-a' => :release,
+  'Release-a' => :release,
+  'Debug-b' => :debug,
+  'Profile-b' => :release,
+  'Release-b' => :release,
 }
 
 def flutter_root
@@ -25,10 +28,21 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 
 flutter_ios_podfile_setup
 
-target 'Runner' do
+# Shared pods for both targets
+def shared_pods
   use_frameworks!
-
+  use_modular_headers!
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
+
+# Runner target (praaktisgo)
+target 'Runner' do
+  shared_pods
+end
+
+# underdog target
+target 'B' do
+  shared_pods
 end
 
 post_install do |installer|
