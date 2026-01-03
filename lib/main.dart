@@ -16,11 +16,27 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xFFFF4444),
         appBar: AppBar(
           toolbarHeight: 0,
-          title: Text("A"),
           centerTitle: true,
           backgroundColor: Color(0xFFFF4444),
         ),
-        body: Center(child: Image.asset('assets/a.png')),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16),
+              child: Image.asset('assets/a.png'),
+            ),
+            Text(
+              "Brand Name: A",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
