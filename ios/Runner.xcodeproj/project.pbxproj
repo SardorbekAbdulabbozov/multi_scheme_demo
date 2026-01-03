@@ -18,7 +18,7 @@
 		415D78BB2F091353008E8E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		415D78BC2F091353008E8E55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		415D78C72F094523008E8E55 /* b-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415D78C62F094523008E8E55 /* b-Info.plist */; };
-		543D46460FC51CF60E0F8C61 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		543D46460FC51CF60E0F8C61 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				543D46460FC51CF60E0F8C61 /* (null) in Frameworks */,
+				543D46460FC51CF60E0F8C61 /* BuildFile in Frameworks */,
 				0C8678AD88FAC1BD195D98BC /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,13 +312,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,7 +372,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		415D78BE2F091353008E8E55 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -392,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin\n";
 		};
 		415D78BF2F091353008E8E55 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -402,13 +398,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-B/Pods-B-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-B/Pods-B-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,6 +551,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -589,6 +582,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -620,6 +614,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -650,6 +645,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -741,6 +737,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -772,6 +769,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -861,6 +859,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -891,6 +890,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -977,6 +977,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1007,6 +1008,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_b.dart";
 				INFOPLIST_FILE = "Runner/b-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = B;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1156,6 +1158,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1187,6 +1190,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FLUTTER_TARGET = "$(PROJECT_DIR)/../lib/main_a.dart";
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = A;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
