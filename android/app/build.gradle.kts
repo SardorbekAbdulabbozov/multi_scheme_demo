@@ -19,8 +19,23 @@ android {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
+    flavorDimensions += "app"
+
+    productFlavors {
+        create("a") {
+            dimension = "app"
+            applicationId = "com.abdulabbozov.multi_scheme_demo.a"
+            resValue("string", "app_name", "A")
+        }
+
+        create("b") {
+            dimension = "app"
+            applicationId = "com.abdulabbozov.multi_scheme_demo.b"
+            resValue("string", "app_name", "B")
+        }
+    }
+
     defaultConfig {
-        applicationId = "com.abdulabbozov.multi_scheme_demo"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
