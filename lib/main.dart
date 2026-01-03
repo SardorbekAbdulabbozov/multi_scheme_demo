@@ -11,9 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Multi-Scheme/Flavor Demo',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(appBar: AppBar(title: Text("Multi-Scheme/Flavor Demo"))),
+      home: Scaffold(
+        backgroundColor: Color(0xFFFF4444),
+        appBar: AppBar(
+          toolbarHeight: 0,
+          title: Text("A"),
+          centerTitle: true,
+          backgroundColor: Color(0xFFFF4444),
+        ),
+        body: Center(child: Image.asset('assets/a.png')),
+      ),
     );
   }
 }

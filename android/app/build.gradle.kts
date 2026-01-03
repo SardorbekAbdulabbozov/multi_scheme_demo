@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.abdulabbozov.demos.multi_scheme_demo"
+    namespace = "com.abdulabbozov.multi_scheme_demo"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.abdulabbozov.demos.multi_scheme_demo"
+        applicationId = "com.abdulabbozov.multi_scheme_demo"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
