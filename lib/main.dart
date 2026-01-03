@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:multi_scheme_demo/brand_config.dart';
 
-void main() async {
+void main({AppScheme scheme = AppScheme.a}) async {
   WidgetsFlutterBinding.ensureInitialized();
+  SchemeConfig.setScheme(scheme);
   runApp(const MyApp());
 }
 
@@ -10,14 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final brandConfig = SchemeConfig.brandConfig;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xFFFF4444),
+        backgroundColor: brandConfig.colors.primaryColor,
         appBar: AppBar(
           toolbarHeight: 0,
           centerTitle: true,
-          backgroundColor: Color(0xFFFF4444),
+          backgroundColor: brandConfig.colors.primaryColor,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,10 +28,10 @@ class MyApp extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 16),
-              child: Image.asset('assets/a.png'),
+              child: Image.asset(brandConfig.assets.logoPath),
             ),
             Text(
-              "Brand Name: A",
+              "Brand Name: ${brandConfig.brandName}",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
